@@ -8,12 +8,17 @@
 <body>
 	<h1><center>Shopping List</center></h1>
 	<div id="list"></div>
+	<div id="users"></div>
 </body>
 <script>
 	$.get('/list', function(items) {
 		console.log("list =", items);
-		$('#list').text(items.join(' | ')); // # lets you access an 'id'
+		$('#list').text(items.join(' | ')); 	// # lets you access an 'id'
+	});
+
+	$.get('/users', function(users) {
+		console.log("users =", users);
+		$('#users').text(users.join(' | '));
 	});
 </script>
 </html>
-

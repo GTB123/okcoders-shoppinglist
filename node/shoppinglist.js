@@ -14,3 +14,7 @@ app.get('/list', function(req,res) {
 	res.json(["Cat Food","Dog Food","Monkey Food"]);
 });
 
+app.get('/users', function(req,res){
+	res.json(["Jon", "Grant", "Tom"])
+});
+
